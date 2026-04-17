@@ -1,112 +1,73 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <title>ViralAja</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ViralAja</title>
 
-  <style>
-    html {
-      scroll-behavior: smooth;
-    }
+<style>
+html {
+  scroll-behavior: smooth;
+}
 
-    body {
-      margin: 0;
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
-      color: white;
-    }
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #0f0f0f;
+  color: white;
+}
 
-    /* NAVBAR */
-    nav {
-      position: fixed;
-      width: 100%;
-      top: 0;
-      background: rgba(0,0,0,0.5);
-      backdrop-filter: blur(10px);
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      padding: 15px;
-      z-index: 1000;
-    }
+/* NAVBAR */
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: black;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 15px;
+  z-index: 1000;
+}
 
-    nav a {
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
+nav a {
+  color: white;
+  text-decoration: none;
+}
 
-    nav a:hover {
-      color: #00f5a0;
-    }
+/* BIAR GAK KETUTUP NAVBAR */
+.section {
+  padding: 100px 20px;
+}
 
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 100px 20px 40px;
-      text-align: center;
-    }
+.container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
+}
 
-    h1 {
-      font-size: 42px;
-      background: linear-gradient(90deg, #00f5a0, #00d9f5);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
+.btn {
+  background: #25D366;
+  padding: 12px 20px;
+  display: inline-block;
+  color: white;
+  text-decoration: none;
+  margin-top: 15px;
+  border-radius: 6px;
+}
 
-    .btn {
-      background: linear-gradient(90deg, #00f5a0, #00d9f5);
-      color: black;
-      padding: 15px 30px;
-      border-radius: 30px;
-      text-decoration: none;
-      display: inline-block;
-      margin-top: 20px;
-      font-weight: bold;
-      transition: 0.3s;
-    }
+.card {
+  background: #1e1e1e;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
 
-    .btn:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0,255,200,0.5);
-    }
-
-    .section {
-      padding: 60px 20px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.05);
-      padding: 25px;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
-      transition: 0.3s;
-    }
-
-    .card:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 0 15px rgba(0,255,200,0.2);
-    }
-
-    .price {
-      font-size: 28px;
-      color: #00f5a0;
-      margin-top: 10px;
-    }
-
-  </style>
+</style>
 </head>
 
 <body>
 
-<!-- NAVBAR -->
 <nav>
   <a href="#home">Home</a>
   <a href="#fitur">Fitur</a>
@@ -114,58 +75,32 @@
   <a href="#testi">Testimoni</a>
 </nav>
 
-<div class="container" id="home">
+<div class="container">
 
-  <!-- HERO -->
+<div id="home" class="section">
   <h1>🔥 ViralAja</h1>
-  <p><b>Tinggal Upload, Bisa Viral</b></p>
-  <p>Konten AI siap upload mulai 10K</p>
-  <a class="btn" href="https://wa.me/6282227575889">🚀 Order Sekarang</a>
+  <p>Tinggal Upload, Bisa Viral</p>
+  <a class="btn" href="https://wa.me/6282227575889">Order Sekarang</a>
+</div>
 
-  <!-- FITUR -->
-  <div class="section" id="fitur">
-    <h2>Kenapa ViralAja?</h2>
-    <div class="grid">
-      <div class="card">⚡ Gak perlu edit</div>
-      <div class="card">🎬 Siap upload</div>
-      <div class="card">🔥 Cocok pemula</div>
-    </div>
-  </div>
+<div id="fitur" class="section">
+  <h2>Fitur</h2>
+  <div class="card">Gak perlu edit</div>
+  <div class="card">Siap upload</div>
+  <div class="card">Cocok pemula</div>
+</div>
 
-  <!-- HARGA -->
-  <div class="section" id="harga">
-    <h2>Paket Harga</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>1 Video</h3>
-        <div class="price">10K</div>
-      </div>
-      <div class="card">
-        <h3>3 Video</h3>
-        <div class="price">25K</div>
-      </div>
-      <div class="card">
-        <h3>5 Video</h3>
-        <div class="price">40K</div>
-      </div>
-    </div>
-  </div>
+<div id="harga" class="section">
+  <h2>Harga</h2>
+  <div class="card">1 Video - 10K</div>
+  <div class="card">3 Video - 25K</div>
+</div>
 
-  <!-- TESTIMONI -->
-  <div class="section" id="testi">
-    <h2>Testimoni</h2>
-    <div class="grid">
-      <div class="card">"Baru upload langsung rame 🔥"</div>
-      <div class="card">"Murah tapi kualitas bagus!"</div>
-      <div class="card">"Cocok buat pemula"</div>
-    </div>
-  </div>
-
-  <!-- CTA -->
-  <div class="section">
-    <h2>Siap Viral? 🚀</h2>
-    <a class="btn" href="https://wa.me/6282227575889">Chat WhatsApp</a>
-  </div>
+<div id="testi" class="section">
+  <h2>Testimoni</h2>
+  <div class="card">Bagus banget 🔥</div>
+  <div class="card">Murah & cepat</div>
+</div>
 
 </div>
 
