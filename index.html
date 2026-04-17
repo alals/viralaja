@@ -6,22 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Segoe UI', sans-serif;
+    html {
+      scroll-behavior: smooth;
     }
 
     body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
       background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
       color: white;
+    }
+
+    /* NAVBAR */
+    nav {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      background: rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 15px;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #00f5a0;
     }
 
     .container {
       max-width: 1000px;
       margin: auto;
-      padding: 20px;
+      padding: 100px 20px 40px;
       text-align: center;
     }
 
@@ -32,18 +55,6 @@
       -webkit-text-fill-color: transparent;
     }
 
-    h2 {
-      margin-bottom: 20px;
-    }
-
-    p {
-      opacity: 0.8;
-    }
-
-    .hero {
-      padding: 80px 20px;
-    }
-
     .btn {
       background: linear-gradient(90deg, #00f5a0, #00d9f5);
       color: black;
@@ -51,14 +62,14 @@
       border-radius: 30px;
       text-decoration: none;
       display: inline-block;
-      margin-top: 25px;
+      margin-top: 20px;
       font-weight: bold;
       transition: 0.3s;
     }
 
     .btn:hover {
       transform: scale(1.05);
-      box-shadow: 0 0 20px rgba(0,255,200,0.5);
+      box-shadow: 0 0 15px rgba(0,255,200,0.5);
     }
 
     .section {
@@ -86,14 +97,8 @@
 
     .price {
       font-size: 28px;
+      color: #00f5a0;
       margin-top: 10px;
-      color: #00f5a0;
-      font-weight: bold;
-    }
-
-    .highlight {
-      color: #00f5a0;
-      font-weight: bold;
     }
 
   </style>
@@ -101,18 +106,24 @@
 
 <body>
 
-<div class="container">
+<!-- NAVBAR -->
+<nav>
+  <a href="#home">Home</a>
+  <a href="#fitur">Fitur</a>
+  <a href="#harga">Harga</a>
+  <a href="#testi">Testimoni</a>
+</nav>
+
+<div class="container" id="home">
 
   <!-- HERO -->
-  <div class="hero">
-    <h1>🔥 ViralAja</h1>
-    <p class="highlight">Tinggal Upload, Bisa Viral</p>
-    <p>Konten AI siap upload mulai 10K</p>
-    <a class="btn" href="https://wa.me/6282227575889">🚀 Order Sekarang</a>
-  </div>
+  <h1>🔥 ViralAja</h1>
+  <p><b>Tinggal Upload, Bisa Viral</b></p>
+  <p>Konten AI siap upload mulai 10K</p>
+  <a class="btn" href="https://wa.me/6282227575889">🚀 Order Sekarang</a>
 
-  <!-- KEUNGGULAN -->
-  <div class="section">
+  <!-- FITUR -->
+  <div class="section" id="fitur">
     <h2>Kenapa ViralAja?</h2>
     <div class="grid">
       <div class="card">⚡ Gak perlu edit</div>
@@ -122,7 +133,7 @@
   </div>
 
   <!-- HARGA -->
-  <div class="section">
+  <div class="section" id="harga">
     <h2>Paket Harga</h2>
     <div class="grid">
       <div class="card">
@@ -141,19 +152,18 @@
   </div>
 
   <!-- TESTIMONI -->
-  <div class="section">
+  <div class="section" id="testi">
     <h2>Testimoni</h2>
     <div class="grid">
       <div class="card">"Baru upload langsung rame 🔥"</div>
       <div class="card">"Murah tapi kualitas bagus!"</div>
-      <div class="card">"Cocok buat pemula kayak aku"</div>
+      <div class="card">"Cocok buat pemula"</div>
     </div>
   </div>
 
   <!-- CTA -->
   <div class="section">
     <h2>Siap Viral? 🚀</h2>
-    <p>Klik sekarang sebelum slot penuh</p>
     <a class="btn" href="https://wa.me/6282227575889">Chat WhatsApp</a>
   </div>
 
