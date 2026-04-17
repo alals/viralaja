@@ -12,8 +12,8 @@ html {
 
 body {
   margin: 0;
-  font-family: Arial;
-  background: #0f0f0f;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #0f0f0f, #1a1a2e);
   color: white;
 }
 
@@ -22,10 +22,11 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: black;
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 25px;
   padding: 15px;
   z-index: 1000;
 }
@@ -33,36 +34,70 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
+  font-size: 14px;
 }
 
-/* BIAR GAK KETUTUP NAVBAR */
+nav a:hover {
+  color: #00f5a0;
+}
+
+/* SECTION FIX */
 .section {
-  padding: 100px 20px;
+  padding: 120px 20px;
 }
 
+/* CONTAINER */
 .container {
-  max-width: 900px;
+  max-width: 1000px;
   margin: auto;
   text-align: center;
 }
 
+/* TITLE */
+h1 {
+  font-size: 42px;
+  background: linear-gradient(90deg, #00f5a0, #00d9f5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* BUTTON */
 .btn {
-  background: #25D366;
-  padding: 12px 20px;
-  display: inline-block;
-  color: white;
+  background: linear-gradient(90deg, #00f5a0, #00d9f5);
+  color: black;
+  padding: 15px 30px;
+  border-radius: 30px;
   text-decoration: none;
-  margin-top: 15px;
-  border-radius: 6px;
+  display: inline-block;
+  margin-top: 20px;
+  font-weight: bold;
+  transition: 0.3s;
 }
 
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+}
+
+/* CARD */
 .card {
-  background: #1e1e1e;
-  padding: 20px;
-  margin: 10px;
-  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+  padding: 25px;
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
 }
 
+.price {
+  font-size: 28px;
+  color: #00f5a0;
+  margin-top: 10px;
+}
 </style>
 </head>
 
@@ -77,29 +112,57 @@ nav a {
 
 <div class="container">
 
+<!-- HERO -->
 <div id="home" class="section">
   <h1>🔥 ViralAja</h1>
-  <p>Tinggal Upload, Bisa Viral</p>
-  <a class="btn" href="https://wa.me/6282227575889">Order Sekarang</a>
+  <p><b>Tinggal Upload, Bisa Viral</b></p>
+  <p>Konten AI siap upload mulai 10K</p>
+  <a class="btn" href="https://wa.me/6282227575889">🚀 Order Sekarang</a>
 </div>
 
+<!-- FITUR -->
 <div id="fitur" class="section">
-  <h2>Fitur</h2>
-  <div class="card">Gak perlu edit</div>
-  <div class="card">Siap upload</div>
-  <div class="card">Cocok pemula</div>
+  <h2>Kenapa ViralAja?</h2>
+  <div class="grid">
+    <div class="card">⚡ Gak perlu edit</div>
+    <div class="card">🎬 Siap upload</div>
+    <div class="card">🔥 Cocok pemula</div>
+  </div>
 </div>
 
+<!-- HARGA -->
 <div id="harga" class="section">
-  <h2>Harga</h2>
-  <div class="card">1 Video - 10K</div>
-  <div class="card">3 Video - 25K</div>
+  <h2>Paket Harga</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>1 Video</h3>
+      <div class="price">10K</div>
+    </div>
+    <div class="card">
+      <h3>3 Video</h3>
+      <div class="price">25K</div>
+    </div>
+    <div class="card">
+      <h3>5 Video</h3>
+      <div class="price">40K</div>
+    </div>
+  </div>
 </div>
 
+<!-- TESTI -->
 <div id="testi" class="section">
   <h2>Testimoni</h2>
-  <div class="card">Bagus banget 🔥</div>
-  <div class="card">Murah & cepat</div>
+  <div class="grid">
+    <div class="card">"Baru upload langsung rame 🔥"</div>
+    <div class="card">"Murah tapi kualitas bagus!"</div>
+    <div class="card">"Cocok buat pemula"</div>
+  </div>
+</div>
+
+<!-- CTA -->
+<div class="section">
+  <h2>Siap Viral? 🚀</h2>
+  <a class="btn" href="https://wa.me/6282227575889">Chat WhatsApp</a>
 </div>
 
 </div>
